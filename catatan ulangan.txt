@@ -1,0 +1,24 @@
+1.
+2.
+3.
+4.SELECT * FROM `tb_obat`;
+5.SELECT * FROM `tb_obat`WHERE jenis = 'obat terbatas';
+6.SELECT * FROM `tb_obat`WHERE stok >50 ORDER BY stok DESC; //DESC = mengurutkan angka dari yang terbesar
+7.SELECT * FROM `tb_obat`nama_obat LIKE '%Becombion%'; //%%
+8.SELECT jenis, COUNT(*) AS jumlah_obat FROM `tb_obat`
+  WHERE jenis = 'obat bebas' GROUP BY jenis;
+9.UPDATE `tb_obat`SET `stok`= '10' WHERE `tb_obat`. `kode_obat`= 'K007'; 
+10.SELECT * FROM `tb_obat` WHERE 
+11.SELECT jenis, AVG(harga_beli) AS rerata_beli FROM `tb_obat` WHERE jenis = 'obat terbatas';
+12.INSERT INTO `tb_obat` (`kode_obat`, `nama_obat`, `jenis`, `satuan`, `stok`, `harga_beli`, `harga_jual`) VALUES ('K011', 'paramex ', 'Obat Bebas', 'Lembar', '14', '4000', '5000')
+13.SELECT * FROM `tb_obat` WHERE kode_obat = 'K011';
+14.SELECT jenis, SUM(stok) as Stok_total FROM `tb_obat` GROUP BY jenis;
+15.DELETE FROM `tb_obat` WHERE kode_obat = 'K005';
+16.SELECT * FROM `tb_obat` WHERE nama_obat LIKE 'A%';
+17.SELECT satuan FROM `tb_obat` GROUP BY satuan;
+18.SELECT * FROM `tb_obat` WHERE harga_beli BETWEEN 10000 AND 25000;
+19.RENAME TABLE `ujian_kartikasaraidewi`.`tb_obat` TO `ujian_kartikasaridewi`.`tbl_obat`;
+20.SELECT * FROM `tbl_obat` WHERE nama_obat LIKE '%mo%' AND stok > 10;
+
+//tambahan 
+SELECT harga_beli, MAX(harga_beli) FROM `tbl_obat`;
